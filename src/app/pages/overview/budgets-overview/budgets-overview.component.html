@@ -1,0 +1,20 @@
+<article class="p-t-4 p-r-4 p-b-4 p-l-4 bg-w border-r-150 flex flex-d-c">
+  <app-overview-card-header
+    title="Budgets"
+    navTitle="See Details"
+  ></app-overview-card-header>
+  <section class="m-t-250 p-t-1 p-b-1 flex gap-200 h-100 align-c">
+    <app-budgets-pie class="w-100 h-100"></app-budgets-pie>
+    <div class="w-100 flex flex-d-c gap-200">
+      @for (budget of (budgetService.budgets$ | async)?.slice(0,4); track
+      $index) {
+      <app-pots-savings-micro
+        [title]="budget.category"
+        [amount]="budget.max"
+        [theme]="budget.theme"
+        class="h-100"
+      ></app-pots-savings-micro>
+      }
+    </div>
+  </section>
+</article>

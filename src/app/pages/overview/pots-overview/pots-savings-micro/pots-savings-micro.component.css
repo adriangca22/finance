@@ -1,0 +1,13 @@
+.grid-item{
+    gap: var(--spacing200);
+    height: 100%;
+}
+
+.grid-item > div{
+    gap: 4px;
+}
+
+.color-tag{
+    width: 4px;
+    border-radius: 8px;
+}

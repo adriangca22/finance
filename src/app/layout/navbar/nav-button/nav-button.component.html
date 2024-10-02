@@ -1,0 +1,7 @@
+<button
+  [ngClass]="(navService.navStatus$ | async) === name ? 'active' : 'inactive'"
+  (click)="buttonClicked()"
+>
+  <img [src]="icon" alt="nav-button-image" />
+  <h2 class="m-l-2">{{ name }}</h2>
+</button>

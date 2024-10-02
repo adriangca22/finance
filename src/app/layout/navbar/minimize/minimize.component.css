@@ -1,0 +1,29 @@
+button{
+    margin-bottom: 58px;
+}
+
+h2{
+    font-weight: 700;
+    color: var(--grey300);
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+
+@media (min-width: 64rem) {
+    button:hover > img{
+        filter: brightness(120%) contrast(90%);
+    }
+
+    button:hover > h2{
+        color: #F2F2F2;
+    }
+}
+
+
+/* Previously 768px*/
+
+@media (max-width: 65.94rem){
+    button{
+        display: none;
+    }
+}

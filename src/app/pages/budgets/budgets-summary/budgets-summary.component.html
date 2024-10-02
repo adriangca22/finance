@@ -1,0 +1,20 @@
+<article class="bg-w p-t-4 p-r-4 p-b-4 p-l-4 flex flex-d-c border-r-150">
+  <app-budgets-pie></app-budgets-pie>
+  <div class="flex m-t-4 flex-d-c">
+    <h2 class="color-g-9 font-s-2 font-w-7 font-lh-120 m-b-3">
+      Spending Summary
+    </h2>
+    <ul>
+      @for(budget of budgetService.budgets$ | async ; track $index; let count =
+      $count){
+      <app-summary-item [budget]="budget"></app-summary-item>
+      @if($index !== count-1){
+      <img
+        class="w-100 m-t-2 m-b-2"
+        src="assets/overview/hr.svg"
+        alt="horizontal-line"
+      />
+      } }
+    </ul>
+  </div>
+</article>

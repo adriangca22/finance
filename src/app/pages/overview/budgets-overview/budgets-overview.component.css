@@ -1,0 +1,33 @@
+article{
+    height: 100%;
+}
+
+section > div {
+    width: 35%;
+}
+
+/* Tablet */
+
+@media (max-width: 65.94rem){
+    section > div{
+        width: 25%;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 47.125rem){
+    article{
+        padding: var(--spacing300) var(--spacing250) var(--spacing300) var(--spacing250)
+    }
+
+    section{
+        flex-direction: column;
+    }
+    section > div{
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        max-height: 102px;
+    }
+}

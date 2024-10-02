@@ -1,0 +1,25 @@
+main{
+    overflow: auto;
+}
+
+/* Tablet - Previously 768px*/
+
+@media (max-width: 65.94rem){
+    .flex-container{
+        flex-direction: column;
+    }
+    main{
+        order: 1;
+    }
+    app-navbar{
+        order: 2;
+    }
+}
+
+/* Mobile - Previously 600 */
+
+@media (max-width: 47.125rem){
+    main{
+        padding: var(--spacing300) var(--spacing200) var(--spacing300) var(--spacing200);
+    }
+}

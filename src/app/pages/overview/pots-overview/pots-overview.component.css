@@ -1,0 +1,43 @@
+/* Potentially change this to height 100%? */
+article{
+}
+
+.gap-11{
+    gap:11px;
+}
+
+.p-r-89{
+    padding-right: 89px;
+}
+
+/* Money bag image */
+img:nth-of-type(2){
+    width: 40px;
+    height: 40px;
+}
+
+.grid{
+    grid-gap: var(--spacing200);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Savings breakpoint */
+
+@media (min-width: 66rem) and (max-width: 86.31rem) {
+    section{
+        flex-direction: column;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 47.125rem){
+    article{
+        padding: var(--spacing300) var(--spacing250) var(--spacing300) var(--spacing250);
+        height: 100%;
+    }
+    section{
+        flex-direction: column;
+        gap: var(--spacing250);
+    }
+}
